@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.currency-at-date').hide();
+    swithToCurrencyCalculator();
     currentDate();
     getCurrenciesList();
     
@@ -42,16 +42,24 @@ $(document).ready(function(){
     $('#currency-date-button').click(function(){
         let date = $('#date-picker').val();
         let currency = $('#select-currency-at-date').children("option:selected").val();
-        $.ajax({
-            method: "GET",
-            url: `https://frankfurter.app/${date}`,
-            success: function(data){
-                let currencyRate = data.rates[currency];
-                $('#date-currency-value').text(`At ${date} 1 ${currency} was ${currencyRate} EUR`);
-                $('#date-currency-value-block').show();
-                console.log(data.rates[currency])
-            }    
-        })
+        if(date > currentDate()){
+            $.alert({
+                title: 'Hey, Dude!',
+                content: 'Select a correct date, pls',
+            });
+            return;
+        }
+        else{
+            $.ajax({
+                method: "GET",
+                url: `https://frankfurter.app/${date}`,
+                success: function(data){
+                    let currencyRate = data.rates[currency];
+                    $('#date-currency-value').text(`At ${date} in 1 EUR was ${currencyRate} ${currency}`);
+                    $('#date-currency-value-block').show();
+                }    
+            })
+        }
         
     })
 
@@ -64,6 +72,7 @@ $(document).ready(function(){
         if (day < 10) day = "0" + day;
         let today = year + "-" + month + "-" + day;       
         $("#date-picker").attr("value", today);
+        return today;
     }
     
     function getCurrenciesList(){
