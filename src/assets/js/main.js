@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    swithToCurrencyCalculator();
+    switchToCurrencyCalculator();
     currentDate();
     getCurrenciesList();
     
@@ -45,7 +45,7 @@ $(document).ready(function(){
         if(date > currentDate()){
             $.alert({
                 title: 'Hey, Dude!',
-                content: 'Select a correct date, pls',
+                content: 'Choose a correct date, pls',
             });
             return;
         }
@@ -105,14 +105,14 @@ $(document).ready(function(){
     }
 });
 
-function swithToCurrencyCalculator(){
+function switchToCurrencyCalculator(){
     $('.currency-at-date').hide();
     $('.currency-calc').show();
     $('#title-currency-date').css('text-decoration', 'none');
     $('#title-calculator').css('text-decoration', 'underline');
 }
 
-function swithToCurrencyAtDate(){
+function switchToCurrencyAtDate(){
     $('.currency-calc').hide();
     $('.currency-at-date').show();
     $('#title-currency-date').css('text-decoration', 'underline');
