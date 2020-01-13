@@ -74,6 +74,11 @@ $(document).ready(function(){
         $("#date-picker").attr("value", today);
         return today;
     }
+
+    $('.dates #date-picker').datepicker({
+        'autoclose': true,
+        'format':'yyyy-mm-dd'
+    });
     
     function getCurrenciesList(){
         $.ajax({

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass -w src/assets/scss/ -o dist/css/"
+    "scss": "node-sass src/assets/scss/ -o dist/css/ && node-sass -w src/assets/scss/ -o dist/css/",
+    "dev": "npm install && npm run scss"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bootstrap": "^4.4.1",
-    "jquery-confirm": "^3.3.4"
+    "jquery-confirm": "^3.3.4",
+    "popper.js": "^1.16.0"
   }
 }

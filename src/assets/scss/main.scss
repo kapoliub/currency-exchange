@@ -63,6 +63,13 @@ main{
                 border: none;
                 border-bottom: 2px solid white;
                 color: white;
+                outline: none;
+                option{
+                    color: black;
+                }
+                :after{
+                    color: black;
+                }
             }
             #convertButton, #currency-date-button{
                 border-radius: 50px;
