@@ -1,0 +1,94 @@
+@import url(../../node_modules/jquery-confirm/dist/jquery-confirm.min.css);
+html {
+  height: 100%; }
+
+body {
+  font-family: 'Candal', sans-serif;
+  background: linear-gradient(to top, #78C5EC, #8DD7C6); }
+
+.hidden {
+  display: none; }
+
+main .container {
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+  main .container .calc-title {
+    font-size: 2em;
+    margin-bottom: 50px; }
+    main .container .calc-title #title-calculator {
+      text-decoration: underline; }
+    main .container .calc-title #title-calculator, main .container .calc-title #title-currency-date {
+      cursor: pointer; }
+      main .container .calc-title #title-calculator:hover, main .container .calc-title #title-currency-date:hover {
+        text-decoration: underline; }
+      main .container .calc-title #title-calculator:active, main .container .calc-title #title-currency-date:active {
+        color: #b7f6f3; }
+  main .container .currency-calc, main .container .currency-at-date {
+    font-size: 1.3em; }
+    main .container .currency-calc label, main .container .currency-at-date label {
+      display: block; }
+    main .container .currency-calc select, main .container .currency-calc input, main .container .currency-at-date select, main .container .currency-at-date input {
+      height: 50px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      outline: none; }
+    main .container .currency-calc #input-amount, main .container .currency-at-date #input-amount {
+      background-color: inherit;
+      border: none;
+      border-bottom: 2px solid white;
+      outline: none;
+      color: white;
+      width: 100%; }
+    main .container .currency-calc #first-currency, main .container .currency-calc #second-currency, main .container .currency-calc #select-currency-at-date, main .container .currency-calc #date-picker, main .container .currency-at-date #first-currency, main .container .currency-at-date #second-currency, main .container .currency-at-date #select-currency-at-date, main .container .currency-at-date #date-picker {
+      width: 100%;
+      background-color: inherit;
+      border: none;
+      border-bottom: 2px solid white;
+      color: white;
+      outline: none; }
+      main .container .currency-calc #first-currency option, main .container .currency-calc #second-currency option, main .container .currency-calc #select-currency-at-date option, main .container .currency-calc #date-picker option, main .container .currency-at-date #first-currency option, main .container .currency-at-date #second-currency option, main .container .currency-at-date #select-currency-at-date option, main .container .currency-at-date #date-picker option {
+        color: black; }
+      main .container .currency-calc #first-currency :after, main .container .currency-calc #second-currency :after, main .container .currency-calc #select-currency-at-date :after, main .container .currency-calc #date-picker :after, main .container .currency-at-date #first-currency :after, main .container .currency-at-date #second-currency :after, main .container .currency-at-date #select-currency-at-date :after, main .container .currency-at-date #date-picker :after {
+        color: black; }
+    main .container .currency-calc #convertButton, main .container .currency-calc #currency-date-button, main .container .currency-at-date #convertButton, main .container .currency-at-date #currency-date-button {
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      font-size: 1em;
+      padding: 0;
+      outline: none;
+      background-color: #ecf0f1; }
+      main .container .currency-calc #convertButton:hover, main .container .currency-calc #currency-date-button:hover, main .container .currency-at-date #convertButton:hover, main .container .currency-at-date #currency-date-button:hover {
+        background-color: #e2e3e4;
+        outline: none; }
+      main .container .currency-calc #convertButton:active, main .container .currency-calc #currency-date-button:active, main .container .currency-at-date #convertButton:active, main .container .currency-at-date #currency-date-button:active {
+        background-color: #c9cbcc;
+        outline: none; }
+    main .container .currency-calc #change-currencies, main .container .currency-at-date #change-currencies {
+      color: white;
+      font-size: 1.2em;
+      font-weight: 900;
+      outline: none;
+      background-color: inherit;
+      border: none;
+      transition: 0.15s; }
+      main .container .currency-calc #change-currencies:hover, main .container .currency-at-date #change-currencies:hover {
+        color: grey; }
+      main .container .currency-calc #change-currencies:active, main .container .currency-at-date #change-currencies:active {
+        outline: none;
+        color: #b7f6f3; }
+    main .container .currency-calc .outputP, main .container .currency-at-date .outputP {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      border-bottom: 2px solid white;
+      top: 100px; }
+
+.jconfirm .jconfirm-box {
+  background: linear-gradient(to bottom, #78C5EC, #8DD7C6);
+  color: white; }
