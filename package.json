@@ -1,0 +1,30 @@
+{
+  "name": "currency-exchange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass src/assets/scss/ -o dist/css/ && node-sass -w src/assets/scss/ -o dist/css/",
+    "dev": "npm install && npm run scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapoliub/currency-exchange.git"
+  },
+  "author": "kapov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kapoliub/currency-exchange/issues"
+  },
+  "homepage": "https://github.com/kapoliub/currency-exchange#readme",
+  "devDependencies": {
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.4.1",
+    "jquery-confirm": "^3.3.4",
+    "popper.js": "^1.16.0"
+  }
+}

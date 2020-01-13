@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./src/assets/js/datepicker.js"></script>
+    <script src="./src/assets/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Candal&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/datepicker.css">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <title>Currency converter</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row calc-title text-center">
+                <div class="col-6">
+                    <p id="title-calculator" onclick="switchToCurrencyCalculator()">Calculator</p>
+                </div>
+                <div class="col-6">
+                    <p id="title-currency-date" onclick="switchToCurrencyAtDate()">Currency at date</p>
+                </div>
+            </div>
+            <div class="row currency-at-date align-items-end">
+                <div class="col-6">
+                    <label for="amount">Currency</label>
+                    <select name="second-cur" id="select-currency-at-date">
+                    </select>
+                </div>
+                <div class="col-5 dates">
+                    <label>Date</label>
+                    <input type="text" id="date-picker" class="form-control">
+                </div>
+                <div class="col-1 text-right">
+                    <button id="currency-date-button" class="btn btn-default">➜</button>
+                </div>
+                <div id="date-currency-value-block" class="col-12 text-center hidden">
+                    <p id="date-currency-value" class="outputP">0</p>
+                </div>
+            </div>
+            <div class="row currency-calc align-items-end">
+                <div class="col-2">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="input-amount" value="1">
+                </div>
+                <div class="col-4">
+                    <label for="first-cur">From</label>
+                    <select name="first-cur" id="first-currency">
+                    </select>
+                </div>
+                <div class="col-1 text-center">
+                    <button id="change-currencies">⇋</button>
+                </div>
+                <div class="col-4">
+                    <label for="second-cur">To</label>
+                    <select name="second-cur" id="second-currency">
+                    </select>
+                </div>
+                <div class="col-1 text-right">
+                    <button id="convertButton" class="btn btn-default">➜</button>
+                </div>
+                <div id="output-value-block" class="col-12 text-center hidden">
+                    <p id="output-value" class="outputP">0</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
