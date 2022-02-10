@@ -19,7 +19,7 @@
   "homepage": "https://github.com/kapoliub/currency-exchange#readme",
   "devDependencies": {
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
